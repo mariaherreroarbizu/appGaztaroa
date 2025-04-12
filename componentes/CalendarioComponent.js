@@ -7,15 +7,11 @@ function Calendario(props) {
     const renderCalendarioItem = ({item, index}) => {
         return (
             <ListItem key={index}
-                onPress={() => props.onPress(item.id)}
-                bottomDivider>
+                onPress={() => props.onPress(item.id)} bottomDivider>
                 <Avatar source={require('./imagenes/40Años.png')} />
                 <ListItem.Content>
-                    <ListItem.Title>
-                        {item.nombre}
-                    </ListItem.Title>
-                    <ListItem.Subtitle>{item.descripcion}
-                    </ListItem.Subtitle>
+                    <ListItem.Title>{item.nombre}</ListItem.Title>
+                    <ListItem.Subtitle>{item.descripcion}</ListItem.Subtitle>
                 </ListItem.Content>
             </ListItem>
         );
