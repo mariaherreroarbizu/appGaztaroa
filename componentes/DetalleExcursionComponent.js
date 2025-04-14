@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView, FlatList} from 'react-native';
-import { Card, Icon } from '@rneui/themed';
+import { Card, Icon, ListItem } from '@rneui/themed';
 import { EXCURSIONES } from '../comun/excursiones';
 import { COMENTARIOS } from '../comun/comentarios';
+import { baseUrl } from '../comun/comun';
 import styles from './StyleComponents';
+import { stylesDetalleExcursion } from './StyleComponents';
 
 
 function RenderExcursion(props) {
@@ -15,10 +17,10 @@ function RenderExcursion(props) {
             <Card containerStyle={styles.container}>
                 <Card.Divider />
                 <Card.Image
-                    source={require('./imagenes/40Años.png')}
+                    source={{uri: baseUrl + excursion.imagen}}
                     style={styles.image}
                 />
-                <Card.Title style={styles.text}>{excursion.nombre}</Card.Title>
+                <Card.Title style={stylesDetalleExcursion.text}>{excursion.nombre}</Card.Title>
                 <Text style={{ margin: 20 }}>
                     {excursion.descripcion}
                 </Text>

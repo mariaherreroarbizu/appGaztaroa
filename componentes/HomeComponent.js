@@ -5,6 +5,7 @@ import { EXCURSIONES } from '../comun/excursiones';
 import { CABECERAS } from '../comun/cabeceras';
 import { ACTIVIDADES } from '../comun/actividades';
 import styles from './StyleComponents';
+import { baseUrl } from '../comun/comun';
 
 function RenderItem(props) {
     
@@ -14,7 +15,7 @@ function RenderItem(props) {
             return (
                 <Card containerStyle={styles.container}><Card.Divider/>
                     <Card.Image
-                        source={require('./imagenes/40Años.png')}
+                        source={{uri: baseUrl + item.imagen}}
                         style={styles.image}>
                         <Card.Title style={styles.text}>{item.nombre}</Card.Title>
                     </Card.Image>

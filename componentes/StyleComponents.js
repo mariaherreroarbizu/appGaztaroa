@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
+import { colorGaztaroaOscuro } from '../comun/comun';
 
 const styles = StyleSheet.create({
     container: {
-        margin: 10,       
+        margin: 10,    
     },
     text: {
         fontSize: 40,
@@ -21,7 +22,7 @@ export const stylesCampoBase = StyleSheet.create({
     flex: 1,
   },
   drawerHeader: {
-    backgroundColor: '#015afc',
+    backgroundColor: colorGaztaroaOscuro,
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
@@ -38,4 +39,13 @@ export const stylesCampoBase = StyleSheet.create({
     width: 80,
     height: 60
   }
+});
+
+export const stylesDetalleExcursion = StyleSheet.create({
+  text: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: 'white',
+    marginTop: -60,
+  },
 });
