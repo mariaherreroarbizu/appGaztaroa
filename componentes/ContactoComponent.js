@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Card } from '@rneui/themed';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        actividades: state.actividades,
+        excursiones: state.excursiones,
+        cabeceras: state.cabeceras
+    }
+}
 
 class Contacto extends Component {
     render() {
@@ -28,4 +37,5 @@ class Contacto extends Component {
         );
     }
 }
-export default Contacto;
+
+export default connect(mapStateToProps)(Contacto);

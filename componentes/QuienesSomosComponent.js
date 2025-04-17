@@ -1,10 +1,17 @@
-import { ACTIVIDADES } from '../comun/actividades';
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { ListItem, Avatar } from '@rneui/themed';
 import { ScrollView, FlatList } from 'react-native';
 import { Card } from '@rneui/themed';
 import { Text } from 'react-native';
 import { baseUrl } from '../comun/comun';
+
+
+const mapStateToProps = state => {
+    return {
+      actividades: state.actividades
+    }
+  }
 
 function Historia() {
     return (
@@ -24,12 +31,6 @@ function Historia() {
 }
 
 class QuienesSomos extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            actividades: ACTIVIDADES
-        };
-    }
     render() {
         const renderActividadesItem = ({ item, index }) => {
             return (
@@ -42,7 +43,6 @@ class QuienesSomos extends Component {
                         <ListItem.Subtitle>{item.descripcion}</ListItem.Subtitle>
                     </ListItem.Content>
                 </ListItem>
-                <Card.Divider/>
                 </> 
             );
         };
@@ -54,7 +54,7 @@ class QuienesSomos extends Component {
                     <Card.Divider />
                     <FlatList
                         scrollEnabled={false}
-                        data={this.state.actividades}
+                        data={this.props.actividades.actividades}
                         renderItem={renderActividadesItem}
                         keyExtractor={item => item.id.toString()}
                     />
@@ -63,4 +63,4 @@ class QuienesSomos extends Component {
         );
     }
 }
-export default QuienesSomos;
+export default connect(mapStateToProps)(QuienesSomos);
