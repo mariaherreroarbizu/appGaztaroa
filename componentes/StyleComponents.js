@@ -49,3 +49,16 @@ export const stylesDetalleExcursion = StyleSheet.create({
     marginTop: -60,
   },
 });
+
+export const stylesIndicadorActividad = StyleSheet.create({
+  indicadorView: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 1
+  },
+  indicadorText: {
+      color: colorGaztaroaOscuro,
+      fontSize: 14,
+      fontWeight: 'bold'
+  }
+});
