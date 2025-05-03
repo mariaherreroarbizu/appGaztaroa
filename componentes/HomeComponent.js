@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, ScrollView, View, Image } from 'react-native';
 import { Card } from '@rneui/themed';
-import styles from './StyleComponents';
+import styles from './StyleComponents.js';
 import { baseUrl } from '../comun/comun';
 import { connect } from 'react-redux';
 import { IndicadorActividad } from './IndicadorActividadComponent'; 

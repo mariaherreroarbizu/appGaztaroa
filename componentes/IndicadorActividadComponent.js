@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import { colorGaztaroaOscuro } from '../comun/comun';
-import { stylesIndicadorActividad } from './StyleComponents';
+import { stylesIndicadorActividad } from './StyleComponents.js';
 
 export const IndicadorActividad = () => {
     return(
